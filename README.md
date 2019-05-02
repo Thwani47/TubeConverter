@@ -10,7 +10,7 @@ This is a Flask program that uses pytube to download videos from YouTube and als
 
 
 ### TODO:
-- [] Handle Error Exceptions (e.g video url DNE):rage:
+- [x] Handle Error Exceptions (e.g video url DNE):rage:
 - [] Create html templates for the front end 
 - [] Add download feature 
 - [] Convert videos after download to mp3 [Will make use of andyp123's class](https://github.com/andyp123/mp4_to_mp3) :headphones:
