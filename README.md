@@ -2,7 +2,7 @@
 An app for downloading videos and/or playlists from youtube and converting them other file formats
 
 ## About
-This is a Flask program that uses pytube to download videos from YouTube and also provides to users an ability to convert the videos to other formats, mainly audio formats.
+This is a CLI Interface that uses pytube to download videos from YouTube and also provides to users an ability to convert the videos to other formats, mainly audio formats.
 
 ### Requirements
 - install flask (pip install flask)
