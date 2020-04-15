@@ -6,6 +6,11 @@ This is a CLI Interface that uses pytube to download videos from YouTube and als
 
 
 ## Usage
+```
+Install the requirements first:
+
+$ pip install -r requirements.txt
+```
 
 ### TODO:
 - [x] Handle Error Exceptions (e.g video from URL DNE):rage:
