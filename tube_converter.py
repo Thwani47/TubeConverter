@@ -40,3 +40,11 @@ class VideoDownloader:
         print("Downloading video track......")
         top_stream.download()
         print("Download complete!")
+        
+        
+class PlaylistDownloader:
+    def __init__(self, url):
+        self.playlistDownloader = Playlist(url)        
+        
+    def print_info(self):
+        print("\nTitle: {0}\n\nNumber of VideosL {1}".format(self.playlistDownloader.title, len(self.playlistDownloader.video_urls)))
