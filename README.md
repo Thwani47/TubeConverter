@@ -10,6 +10,15 @@ This is a CLI Interface that uses pytube to download videos from YouTube and als
 Install the requirements first:
 
 $ pip install -r requirements.txt
+
+To download a single video (mp4 format):
+
+$ python main.py --video --url URL --video-only
+
+To download a single video (audio track format):
+
+$ python main.py --video --url URL --audio-only
+
 ```
 
 ### TODO:
