@@ -26,7 +26,17 @@ class VideoDownloader:
         top_stream.download()
         print("Download complete!")
         
-    def download_mp4(self):
-        self.streams = self.videoDownloader.streams.filter(file_extension='mp4').all()
+    def download_video(self):
+        self.streams = self.videoDownloader.streams.filter(file_extension='mp4')
         
-
+        top_stream = self.streams[0]
+        
+        print("Getting video with highest quality.....")
+        for stream in self.streams:
+            if stream.resolution:
+                if int(stream.resolution.split("p")[0]) >= int(top_stream.resolution.split("p")[0]):
+                    top_stream = stream
+                    
+        print("Downloading video track......")
+        top_stream.download()
+        print("Download complete!")
