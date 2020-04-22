@@ -1,10 +1,12 @@
 from pytube import YouTube, Playlist
-
+import pytube
+import os
 
 class VideoDownloader:
     def __init__(self, url):
         self.videoDownloader = YouTube(url)
         self.streams = self.videoDownloader.streams
+        self.url  = url
 
     def print_info(self):
         print("\n[INFO]:\n\ntitle: {0}\n\nThumbnail URL: {1}\n\nLength (seconds): {2}"
@@ -23,7 +25,14 @@ class VideoDownloader:
                     top_stream = stream
                     
         print("Downloading audio track......")
-        top_stream.download()
+        mp4_name = pytube.extract.video_id(self.url)
+        mp3_name = self.videoDownloader.title.strip() + '.mp3'
+        print(mp4_name)
+        print(mp3_name)
+        top_stream.download(filename=mp4_name)
+        os.rename(mp4_name + ".mp4", mp3_name)
+        # os.system("ren {0} {1}".format(mp4_name + ".mp4", mp3_name ))
+                
         print("Download complete!")
         
     def download_video(self):
